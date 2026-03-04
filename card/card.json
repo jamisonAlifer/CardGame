@@ -1,0 +1,122 @@
+[
+  {
+	"id": "helmet_02",
+	"name": "Steel Helmet",
+	"category": "equipment",
+	"equipment": { "slot": "head", "hands_required": 0 },
+	"stats": { "power_bonus": 3 },
+	"economy": { "value": 120 },
+	"restrictions": { "class": [], "race": [] },
+	"monster": { "level": 0, "power": 0, "rewards": { "gold": 0, "levels": 0 } },
+	"rarity": "common",
+	"effects": []
+  },
+  {
+	"id": "helmet_03",
+	"name": "Mystic Hood",
+	"category": "equipment",
+	"equipment": { "slot": "head", "hands_required": 0 },
+	"stats": { "power_bonus": 5 },
+	"economy": { "value": 250 },
+	"restrictions": { "class": ["mage"], "race": [] },
+	"monster": { "level": 0, "power": 0, "rewards": { "gold": 0, "levels": 0 } },
+	"rarity": "rare",
+	"effects": []
+  },
+  {
+	"id": "armor_02",
+	"name": "Chainmail Armor",
+	"category": "equipment",
+	"equipment": { "slot": "chest", "hands_required": 0 },
+	"stats": { "power_bonus": 6 },
+	"economy": { "value": 300 },
+	"restrictions": { "class": [], "race": [] },
+	"monster": { "level": 0, "power": 0, "rewards": { "gold": 0, "levels": 0 } },
+	"rarity": "rare",
+	"effects": []
+  },
+  {
+	"id": "armor_03",
+	"name": "Dragon Scale Armor",
+	"category": "equipment",
+	"equipment": { "slot": "chest", "hands_required": 0 },
+	"stats": { "power_bonus": 10 },
+	"economy": { "value": 800 },
+	"restrictions": { "class": ["warrior"], "race": [] },
+	"monster": { "level": 0, "power": 0, "rewards": { "gold": 0, "levels": 0 } },
+	"rarity": "epic",
+	"effects": []
+  },
+  {
+	"id": "boots_02",
+	"name": "Iron Boots",
+	"category": "equipment",
+	"equipment": { "slot": "feet", "hands_required": 0 },
+	"stats": { "power_bonus": 2 },
+	"economy": { "value": 100 },
+	"restrictions": { "class": [], "race": [] },
+	"monster": { "level": 0, "power": 0, "rewards": { "gold": 0, "levels": 0 } },
+	"rarity": "common",
+	"effects": []
+  },
+  {
+	"id": "boots_03",
+	"name": "Shadow Boots",
+	"category": "equipment",
+	"equipment": { "slot": "feet", "hands_required": 0 },
+	"stats": { "power_bonus": 4 },
+	"economy": { "value": 350 },
+	"restrictions": { "class": ["rogue"], "race": [] },
+	"monster": { "level": 0, "power": 0, "rewards": { "gold": 0, "levels": 0 } },
+	"rarity": "rare",
+	"effects": []
+  },
+  {
+	"id": "leggings_02",
+	"name": "Leather Pants",
+	"category": "equipment",
+	"equipment": { "slot": "legs", "hands_required": 0 },
+	"stats": { "power_bonus": 2 },
+	"economy": { "value": 90 },
+	"restrictions": { "class": [], "race": [] },
+	"monster": { "level": 0, "power": 0, "rewards": { "gold": 0, "levels": 0 } },
+	"rarity": "common",
+	"effects": []
+  },
+  {
+	"id": "leggings_03",
+	"name": "Knight Leggings",
+	"category": "equipment",
+	"equipment": { "slot": "legs", "hands_required": 0 },
+	"stats": { "power_bonus": 5 },
+	"economy": { "value": 400 },
+	"restrictions": { "class": ["warrior"], "race": [] },
+	"monster": { "level": 0, "power": 0, "rewards": { "gold": 0, "levels": 0 } },
+	"rarity": "rare",
+	"effects": []
+  },
+  {
+	"id": "gloves_01",
+	"name": "Power Gloves",
+	"category": "equipment",
+	"equipment": { "slot": "hands", "hands_required": 0 },
+	"stats": { "power_bonus": 3 },
+	"economy": { "value": 180 },
+	"restrictions": { "class": [], "race": [] },
+	"monster": { "level": 0, "power": 0, "rewards": { "gold": 0, "levels": 0 } },
+	"rarity": "common",
+	"effects": []
+  },
+  {
+	"id": "belt_01",
+	"name": "War Belt",
+	"category": "equipment",
+	"equipment": { "slot": "waist", "hands_required": 0 },
+	"stats": { "power_bonus": 4 },
+	"economy": { "value": 220 },
+	"restrictions": { "class": [], "race": [] },
+	"monster": { "level": 0, "power": 0, "rewards": { "gold": 0, "levels": 0 } },
+	"rarity": "common",
+	"effects": []
+  }
+]

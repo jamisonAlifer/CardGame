@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://dhbwjegwht7v8"]
+
+[ext_resource type="Script" uid="uid://diek76fhloj0q" path="res://card/card.gd" id="1_i5nmj"]
+
+[resource]
+script = ExtResource("1_i5nmj")
+id = "dagger_01"
+name = "Dagger"
+slot = "hand"
+hands_required = 2
+power_bonus = 2500
+restrictions = {
+"class": &"teste",
+"race": "teste"
+}
+effects = ["teste"]
+metadata/_custom_type_script = "uid://diek76fhloj0q"

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cnbb8pryjwgel"]
+
+[ext_resource type="Script" uid="uid://nq7k0hkt03aq" path="res://scripts/gameManager.gd" id="1_mtgg2"]
+
+[node name="Main" type="Node2D" unique_id=1671693726]
+
+[node name="Node" type="Node" parent="." unique_id=543906291]
+script = ExtResource("1_mtgg2")
+
+[node name="CardContainer" type="Node2D" parent="." unique_id=1976080910]
+
+[node name="Ui" type="Control" parent="." unique_id=851562561]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
