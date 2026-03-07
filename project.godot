@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="cardgame2"
-run/main_scene="res://cenas/main.tscn"
+run/main_scene="uid://m6flt2lw6adn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameData="*uid://mqqcatsjt6aj"
 
 [physics]
 

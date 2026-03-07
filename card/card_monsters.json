@@ -7,7 +7,7 @@
 	"stats": { "power_bonus": 0 },
 	"economy": { "value": 50 },
 	"restrictions": { "class": [], "race": [] },
-	"monster": { "level": 1, "power": 2, "rewards": { "gold": 50, "levels": 8 } },
+	"monster": { "level": 1, "power": 2, "rewards": { "levels": 1, "treasures": 1 } },
 	"rarity": "common",
 	"effects": []
   },
@@ -19,7 +19,7 @@
 	"stats": { "power_bonus": 0 },
 	"economy": { "value": 80 },
 	"restrictions": { "class": [], "race": [] },
-	"monster": { "level": 2, "power": 4, "rewards": { "gold": 80, "levels": 4 } },
+	"monster": { "level": 2, "power": 4, "rewards": { "levels": 1, "treasures": 1 } },
 	"rarity": "common",
 	"effects": []
   },
@@ -31,7 +31,7 @@
 	"stats": { "power_bonus": 0 },
 	"economy": { "value": 70 },
 	"restrictions": { "class": [], "race": [] },
-	"monster": { "level": 2, "power": 3, "rewards": { "gold": 70, "levels": 3 } },
+	"monster": { "level": 2, "power": 3, "rewards": { "levels": 1, "treasures": 1 } },
 	"rarity": "common",
 	"effects": []
   },
@@ -43,7 +43,7 @@
 	"stats": { "power_bonus": 0 },
 	"economy": { "value": 60 },
 	"restrictions": { "class": [], "race": [] },
-	"monster": { "level": 1, "power": 3, "rewards": { "gold": 60, "levels": 6} },
+	"monster": { "level": 1, "power": 3, "rewards": { "levels": 1, "treasures": 1 } },
 	"rarity": "common",
 	"effects": []
   },
@@ -55,7 +55,7 @@
 	"stats": { "power_bonus": 0 },
 	"economy": { "value": 150 },
 	"restrictions": { "class": [], "race": [] },
-	"monster": { "level": 4, "power": 6, "rewards": { "gold": 150, "levels": 4 } },
+	"monster": { "level": 4, "power": 6, "rewards": { "levels": 2, "treasures": 2 } },
 	"rarity": "uncommon",
 	"effects": []
   },
@@ -67,7 +67,7 @@
 	"stats": { "power_bonus": 0 },
 	"economy": { "value": 200 },
 	"restrictions": { "class": [], "race": [] },
-	"monster": { "level": 5, "power": 7, "rewards": { "gold": 200, "levels": 2 } },
+	"monster": { "level": 5, "power": 7, "rewards": { "levels": 2, "treasures": 2 } },
 	"rarity": "rare",
 	"effects": []
   },
@@ -79,7 +79,7 @@
 	"stats": { "power_bonus": 0 },
 	"economy": { "value": 500 },
 	"restrictions": { "class": [], "race": [] },
-	"monster": { "level": 10, "power": 15, "rewards": { "gold": 500, "levels": 2 } },
+	"monster": { "level": 10, "power": 15, "rewards": { "levels": 4, "treasures": 4 } },
 	"rarity": "legendary",
 	"effects": []
   },
@@ -91,7 +91,7 @@
 	"stats": { "power_bonus": 0 },
 	"economy": { "value": 90 },
 	"restrictions": { "class": [], "race": [] },
-	"monster": { "level": 3, "power": 5, "rewards": { "gold": 90, "levels": 2} },
+	"monster": { "level": 3, "power": 5, "rewards": { "levels": 2, "treasures": 2 } },
 	"rarity": "common",
 	"effects": []
   },
@@ -103,7 +103,7 @@
 	"stats": { "power_bonus": 0 },
 	"economy": { "value": 300 },
 	"restrictions": { "class": [], "race": [] },
-	"monster": { "level": 7, "power": 10, "rewards": { "gold": 300, "levels": 9 } },
+	"monster": { "level": 7, "power": 10, "rewards": { "levels": 3, "treasures": 3 } },
 	"rarity": "epic",
 	"effects": []
   },
@@ -115,7 +115,7 @@
 	"stats": { "power_bonus": 0 },
 	"economy": { "value": 30 },
 	"restrictions": { "class": [], "race": [] },
-	"monster": { "level": 1, "power": 1, "rewards": { "gold": 30, "levels": 2 } },
+	"monster": { "level": 1, "power": 1, "rewards": { "levels": 1, "treasures": 1 } },
 	"rarity": "common",
 	"effects": []
   }

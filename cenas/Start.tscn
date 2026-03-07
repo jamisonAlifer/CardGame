@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://m6flt2lw6adn"]
+
+[ext_resource type="Script" uid="uid://vo7gqdb6mtx4" path="res://scripts/start.gd" id="1_8hce5"]
+
+[node name="Control" type="Control" unique_id=1709061184]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8hce5")
+
+[node name="Panel" type="Panel" parent="." unique_id=751064164]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 83.0
+offset_right = 1072.0
+offset_bottom = 533.0
+
+[node name="Label" type="Label" parent="Panel" unique_id=976842853]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 151.0
+offset_right = 535.0
+offset_bottom = 174.0
+text = "Digite seu nome"
+
+[node name="LineEdit" type="LineEdit" parent="Panel" unique_id=1910037342]
+layout_mode = 0
+offset_left = 341.0
+offset_top = 205.0
+offset_right = 610.0
+offset_bottom = 247.0
+
+[node name="Button" type="Button" parent="Panel" unique_id=281251313]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 290.0
+offset_right = 543.0
+offset_bottom = 323.0
+text = "Entrar
+"
+
+[connection signal="text_submitted" from="Panel/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

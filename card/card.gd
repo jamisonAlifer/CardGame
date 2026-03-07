@@ -20,5 +20,5 @@ class_name Card
 # Monster
 var monster_level: int = 0
 var monster_power: int = 0
-var reward_gold: int = 0
 var reward_levels: int = 0
+var reward_treasures: int = 0

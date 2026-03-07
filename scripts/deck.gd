@@ -36,7 +36,7 @@ func load_cards_from_json(path: String) -> Array[Card]:
 		card.id = card_data["id"]
 		card.name = card_data["name"]
 		card.rarity = card_data["rarity"]
-
+		card.category = card_data["category"]
 		card.slot = card_data["equipment"]["slot"] if card_data["equipment"]["slot"] != null else ""
 		card.hands_required = card_data["equipment"]["hands_required"] 
 		card.power_bonus = card_data["stats"]["power_bonus"]
@@ -52,8 +52,8 @@ func load_cards_from_json(path: String) -> Array[Card]:
 		if card_data["category"] == "monster":
 			card.monster_level = card_data["monster"]["level"]
 			card.monster_power = card_data["monster"]["power"]
-			card.reward_gold   = card_data["monster"]["rewards"]["gold"]
 			card.reward_levels = card_data["monster"]["rewards"]["levels"]
+			card.reward_treasures = card_data["monster"]["rewards"]["treasures"]
 		cards.append(card)
 
 	return cards

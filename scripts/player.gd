@@ -2,6 +2,7 @@ extends RefCounted
 class_name Player
 
 # --- Base Attributes ---
+var UUID:String
 var name: String
 var level: int = 1
 var base_power: int = 1
