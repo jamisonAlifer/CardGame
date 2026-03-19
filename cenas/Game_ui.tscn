@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://8ntgu0gr2gxx"]
 
 [ext_resource type="Script" uid="uid://bmagday85ku5s" path="res://scripts/game_ui.gd" id="1_em4tf"]
+[ext_resource type="PackedScene" uid="uid://kg8jmossavjd" path="res://cenas/hand.tscn" id="3_nf12e"]
+[ext_resource type="PackedScene" uid="uid://ds3mpnowdbbi4" path="res://cenas/equipment_slot.tscn" id="3_nipa6"]
 
 [node name="GameUI" type="Control" unique_id=471678413]
 layout_mode = 3
@@ -12,6 +14,7 @@ grow_vertical = 2
 script = ExtResource("1_em4tf")
 
 [node name="PlayerSlot1" type="Panel" parent="." unique_id=1619602292]
+visible = false
 layout_mode = 0
 offset_left = 43.0
 offset_top = 35.0
@@ -24,7 +27,7 @@ offset_left = 48.0
 offset_top = 10.0
 offset_right = 106.0
 offset_bottom = 33.0
-text = "Player1"
+text = "p1"
 
 [node name="LevelLabel" type="Label" parent="PlayerSlot1" unique_id=2002081282]
 layout_mode = 0
@@ -32,7 +35,7 @@ offset_left = 18.0
 offset_top = 10.0
 offset_right = 41.0
 offset_bottom = 33.0
-text = "09"
+text = "00"
 
 [node name="ItemsContainer" type="VBoxContainer" parent="PlayerSlot1" unique_id=1033402900]
 layout_mode = 0
@@ -42,6 +45,7 @@ offset_right = 127.0
 offset_bottom = 139.0
 
 [node name="PlayerSlot2" type="Panel" parent="." unique_id=1223001411]
+visible = false
 layout_mode = 0
 offset_left = 429.0
 offset_top = 35.0
@@ -54,7 +58,7 @@ offset_left = 48.0
 offset_top = 10.0
 offset_right = 106.0
 offset_bottom = 33.0
-text = "Player1"
+text = "P2"
 
 [node name="LevelLabel" type="Label" parent="PlayerSlot2" unique_id=1494692690]
 layout_mode = 0
@@ -62,7 +66,7 @@ offset_left = 18.0
 offset_top = 10.0
 offset_right = 41.0
 offset_bottom = 33.0
-text = "09"
+text = "00"
 
 [node name="ItemsContainer" type="VBoxContainer" parent="PlayerSlot2" unique_id=1262917103]
 layout_mode = 0
@@ -72,6 +76,7 @@ offset_right = 127.0
 offset_bottom = 139.0
 
 [node name="PlayerSlot3" type="Panel" parent="." unique_id=204108887]
+visible = false
 layout_mode = 0
 offset_left = 615.0
 offset_top = 35.0
@@ -102,6 +107,7 @@ offset_right = 127.0
 offset_bottom = 139.0
 
 [node name="PlayerSlot4" type="Panel" parent="." unique_id=847925356]
+visible = false
 layout_mode = 0
 offset_left = 799.0
 offset_top = 35.0
@@ -117,6 +123,7 @@ offset_bottom = 34.0
 text = "Player1"
 
 [node name="PlayerSlot5" type="Panel" parent="." unique_id=1162239613]
+visible = false
 layout_mode = 0
 offset_left = 979.0
 offset_top = 35.0
@@ -240,14 +247,62 @@ offset_right = 630.0
 offset_bottom = 481.0
 text = "Finalizar turno"
 
-[node name="timer_label" type="Label" parent="." unique_id=1164954590]
+[node name="EquipmentSlot" parent="." unique_id=493944392 instance=ExtResource("3_nipa6")]
+layout_mode = 1
+anchors_preset = -1
+
+[node name="helper" type="Panel" parent="." unique_id=1666684203]
+visible = false
 layout_mode = 0
-offset_left = 261.0
-offset_top = 40.0
-offset_right = 309.0
-offset_bottom = 89.0
-text = "30
-"
+offset_left = 12.0
+offset_top = 549.0
+offset_right = 281.0
+offset_bottom = 636.0
+
+[node name="Label" type="Label" parent="helper" unique_id=189431907]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 4.0
+offset_right = 228.0
+offset_bottom = 27.0
+text = "Player X solictou sua ajuda"
+
+[node name="yes" type="Button" parent="helper" unique_id=1805482686]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 51.0
+offset_right = 106.0
+offset_bottom = 82.0
+text = "Sim"
+
+[node name="no" type="Button" parent="helper" unique_id=1006669318]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 51.0
+offset_right = 244.0
+offset_bottom = 82.0
+text = "Não"
+
+[node name="Hand" parent="." unique_id=1015080693 instance=ExtResource("3_nf12e")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 481.0
+offset_right = 1280.0
+offset_bottom = 719.0
+
+[node name="Control" type="Control" parent="." unique_id=688959000]
+anchors_preset = 0
+offset_left = 331.0
+offset_right = 1289.0
+offset_bottom = 153.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1548306217]
+layout_mode = 0
+offset_left = -28.0
+offset_top = 3.0
+offset_right = 953.0
+offset_bottom = 165.0
+theme_override_constants/separation = 210
 
 [connection signal="pressed" from="Turno_Player/Inicio_turno/Explorar" to="." method="_on_explorar_pressed"]
 [connection signal="pressed" from="Turno_Player/Inicio_turno/Equipar" to="." method="_on_equipar_pressed"]
@@ -256,3 +311,5 @@ text = "30
 [connection signal="pressed" from="Turno_Player/Turno/Combate/Fugir" to="." method="_on_fugir_pressed"]
 [connection signal="pressed" from="Turno_Player/Turno/EndTurn/Invocar" to="." method="_on_invocar_pressed"]
 [connection signal="pressed" from="Turno_Player/Turno/EndTurn/Finalizar" to="." method="_on_finalizar_pressed"]
+[connection signal="pressed" from="helper/yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="helper/no" to="." method="_on_no_pressed"]

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://kg8jmossavjd"]
+
+[ext_resource type="Script" uid="uid://crm2ddxkbtjqu" path="res://scripts/HandUi.gd" id="1_enaib"]
+
+[node name="Hand" type="Control" unique_id=1015080693]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -3.0
+offset_top = 480.0
+offset_right = 1277.0
+offset_bottom = 718.0
+mouse_filter = 1
+script = ExtResource("1_enaib")
+
+[node name="Cards" type="Control" parent="." unique_id=1686530658]
+layout_mode = 1
+anchor_left = -0.017
+anchor_top = -1.94
+anchor_right = -0.017
+anchor_bottom = -1.94
+offset_left = 24.760002
+offset_top = 489.72
+offset_right = 1305.76
+offset_bottom = 700.72
+mouse_filter = 1
+
+[node name="Button" type="Button" parent="." unique_id=1848384302]
+layout_mode = 0
+offset_left = 584.0
+offset_top = -135.0
+offset_right = 698.0
+offset_bottom = -72.0
+text = "ADD CARTA"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

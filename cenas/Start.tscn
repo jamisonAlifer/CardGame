@@ -16,6 +16,7 @@ grow_vertical = 2
 script = ExtResource("1_8hce5")
 
 [node name="Panel" type="Panel" parent="." unique_id=751064164]
+visible = false
 layout_mode = 0
 offset_left = 81.0
 offset_top = 83.0
@@ -46,5 +47,47 @@ offset_bottom = 323.0
 text = "Entrar
 "
 
+[node name="Panel2" type="Panel" parent="." unique_id=2004394621]
+visible = false
+layout_mode = 0
+offset_left = 81.0
+offset_top = 83.0
+offset_right = 1072.0
+offset_bottom = 533.0
+
+[node name="Label" type="Label" parent="Panel2" unique_id=1935532749]
+layout_mode = 0
+offset_left = 319.0
+offset_top = 184.0
+offset_right = 620.0
+offset_bottom = 207.0
+text = "Digite seu nome"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Panel2" unique_id=894370216]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 239.0
+offset_right = 535.0
+offset_bottom = 272.0
+text = "Entrar
+"
+
+[node name="Panel3" type="Panel" parent="." unique_id=1437017860]
+layout_mode = 0
+offset_left = 455.0
+offset_top = 201.0
+offset_right = 784.0
+offset_bottom = 382.0
+
+[node name="Label" type="Label" parent="Panel3" unique_id=1943686734]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 77.0
+offset_right = 231.0
+offset_bottom = 100.0
+text = "Carregando. . ."
+
 [connection signal="text_submitted" from="Panel/LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel2/Button" to="." method="_on_button_pressed"]

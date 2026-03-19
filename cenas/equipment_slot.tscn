@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://ds3mpnowdbbi4"]
+
+[ext_resource type="Script" uid="uid://d0dsyffwc266y" path="res://scripts/drag_itens.gd" id="2_6qkli"]
+
+[node name="EquipmentSlot" type="Control" unique_id=493944392]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HandSlot" type="Panel" parent="." unique_id=1162720636]
+layout_mode = 0
+offset_left = 980.0
+offset_top = 529.0
+offset_right = 1152.0
+offset_bottom = 644.0
+script = ExtResource("2_6qkli")
+
+[node name="Title" type="Label" parent="HandSlot" unique_id=26957975]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 1.0
+offset_right = 104.0
+offset_bottom = 24.0
+text = "HAND"
+
+[node name="Item" type="Label" parent="HandSlot" unique_id=80525669]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 39.0
+offset_right = 171.0
+offset_bottom = 62.0
+text = "Calça Calçada"
+horizontal_alignment = 1
+
+[node name="Item2" type="Label" parent="HandSlot" unique_id=2013006344]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 87.0
+offset_right = 170.0
+offset_bottom = 110.0
+text = "Calça Calçada"
+horizontal_alignment = 1
+
+[node name="FeetSlot" type="Panel" parent="." unique_id=386855309]
+layout_mode = 0
+offset_left = 978.0
+offset_top = 444.0
+offset_right = 1151.0
+offset_bottom = 509.0
+script = ExtResource("2_6qkli")
+
+[node name="Title" type="Label" parent="FeetSlot" unique_id=316120591]
+layout_mode = 0
+offset_left = 68.0
+offset_top = -3.0
+offset_right = 108.0
+offset_bottom = 20.0
+text = "FEET"
+
+[node name="Item" type="Label" parent="FeetSlot" unique_id=1023546664]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 41.0
+offset_right = 184.0
+offset_bottom = 64.0
+text = "Calça Calçada"
+horizontal_alignment = 1
+
+[node name="BodySlot" type="Panel" parent="." unique_id=1059566361]
+layout_mode = 0
+offset_left = 976.0
+offset_top = 272.0
+offset_right = 1152.0
+offset_bottom = 336.0
+script = ExtResource("2_6qkli")
+
+[node name="Title" type="Label" parent="BodySlot" unique_id=1496245703]
+layout_mode = 0
+offset_left = 67.0
+offset_top = -1.0
+offset_right = 112.0
+offset_bottom = 22.0
+text = "BODY"
+
+[node name="Item" type="Label" parent="BodySlot" unique_id=267717873]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 39.0
+offset_right = 176.0
+offset_bottom = 62.0
+text = "Calça Calçada"
+horizontal_alignment = 1
+
+[node name="HeadSlot" type="Panel" parent="." unique_id=1886296767]
+layout_mode = 0
+offset_left = 974.0
+offset_top = 194.0
+offset_right = 1152.0
+offset_bottom = 257.0
+script = ExtResource("2_6qkli")
+
+[node name="Title" type="Label" parent="HeadSlot" unique_id=1722565111]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 2.0
+offset_right = 110.0
+offset_bottom = 25.0
+text = "HEAD"
+
+[node name="Item" type="Label" parent="HeadSlot" unique_id=1113027994]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 38.0
+offset_right = 178.0
+offset_bottom = 61.0
+text = "Calça Calçada"
+horizontal_alignment = 1
+
+[node name="LegsSlot" type="Panel" parent="." unique_id=145828037]
+layout_mode = 0
+offset_left = 975.0
+offset_top = 357.0
+offset_right = 1152.0
+offset_bottom = 419.0
+script = ExtResource("2_6qkli")
+
+[node name="Title" type="Label" parent="LegsSlot" unique_id=637507442]
+layout_mode = 0
+offset_left = 71.0
+offset_top = -1.0
+offset_right = 111.0
+offset_bottom = 22.0
+text = "LEG"
+
+[node name="Item" type="Label" parent="LegsSlot" unique_id=925998755]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 36.0
+offset_right = 175.0
+offset_bottom = 59.0
+text = "Calça Calçada"
+horizontal_alignment = 1

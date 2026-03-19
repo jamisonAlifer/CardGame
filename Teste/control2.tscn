@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://exdx021owiue"]
+
+[ext_resource type="Script" uid="uid://bxid78d0x85nq" path="res://Teste/h_box_container.gd" id="1_0510m"]
+[ext_resource type="PackedScene" uid="uid://cnltusuh7ihwo" path="res://Teste/control.tscn" id="2_6ejnj"]
+[ext_resource type="PackedScene" uid="uid://kg8jmossavjd" path="res://cenas/hand.tscn" id="3_116nj"]
+[ext_resource type="Script" uid="uid://w8yxr7q3ns3o" path="res://Teste/panel.gd" id="4_uownv"]
+
+[node name="Control" type="Control" unique_id=981920908]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.003
+offset_right = -3.0
+offset_bottom = -0.16003418
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0510m")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=761190953]
+layout_mode = 0
+offset_right = 1289.0
+offset_bottom = 739.0
+color = Color(0.7242148, 0.9729038, 0.57627165, 1)
+
+[node name="Control" type="Control" parent="." unique_id=856454216]
+anchors_preset = 0
+offset_left = 238.0
+offset_top = -6.0
+offset_right = 1283.0
+offset_bottom = 156.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=11513133]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 9.0
+offset_right = 1046.0
+offset_bottom = 210.0
+theme_override_constants/separation = 210
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1194329391]
+
+[node name="Hand" parent="CanvasLayer" unique_id=1015080693 instance=ExtResource("3_116nj")]
+
+[node name="PlayerUi" parent="CanvasLayer" unique_id=198994677 instance=ExtResource("2_6ejnj")]
+offset_left = 2.0
+offset_top = 248.0
+offset_right = -1012.0
+offset_bottom = -242.0
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=104388997 groups=["card_slot"]]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1081.0
+offset_top = 268.0
+offset_right = 1280.0
+offset_bottom = 479.0
+script = ExtResource("4_uownv")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=1488207537]
+layout_mode = 0
+offset_right = 207.0
+offset_bottom = 211.0

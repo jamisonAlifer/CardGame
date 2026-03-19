@@ -19,6 +19,16 @@ config/icon="res://icon.svg"
 
 GameData="*uid://mqqcatsjt6aj"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
+[global_group]
+
+card_slot=""
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

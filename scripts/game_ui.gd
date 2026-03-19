@@ -2,8 +2,8 @@ extends Control
 # ==========================
 # SINALS TURN
 # ==========================
-signal explorer
 signal equip_equipment
+var card_turn: Card
 # ==========================
 # SLOTS DE JOGADORES
 # ==========================
@@ -15,54 +15,59 @@ signal equip_equipment
 
 var slots: Array[Panel] = []
 var current_player_id: String  # UUID do jogador local
+var bot: BotAi = BotAi.new()
 
+var player_ui = preload("res://Teste/control.tscn")
 # ==========================
 # READY - inicializa a UI
 # ==========================
 func _ready() -> void:
-	print("Iniciando GUI")
-	
+	add_child(bot)
 	# Conecta sinais do GameData
-	GameData.turn_timer_updated.connect(_on_timer_updated)
-	GameData.turn_started.connect(_on_turn_started)
 	GameData.play_phase_started.connect(_on_play_turn_started)
 	GameData.combat_phase_started.connect(_on_combat_turn)
 	GameData.players_data_updated.connect(_on_players_updated)
-
-	slots = [
-		player_slot_1,
-		player_slot_2,
-		player_slot_3,
-		player_slot_4,
-		player_slot_5
-	]
+	GameData.find_helper.connect(_on_help_request)
+	
+	for i in range(GameData.players.size()):	
+		var player = GameData.players[i]
+		if player.UUID == GameData.current_player.UUID:
+			continue
+		player.name = player.name
+		var player2 = player_ui.instantiate()
+		var container = $Control/HBoxContainer
+		container.add_child(player2)
+		player2.update_data(player)
+		slots.append(player2)
 	 # Atualiza imediatamente
-	_on_players_updated(GameData.players)
 	current_player_id = GameData.current_player.UUID
 	$Label.text = "Player ID: " + current_player_id
+	_on_players_updated(GameData.players)
 # ==========================
 # ATUALIZA OS SLOTS COM OS JOGADORES
 # ==========================
 func _on_players_updated(players: Array) -> void:
-	print("Atualizando lista de jogadores")
-	# Jogador local sempre no slot 0
-	for player: Player in players:
-		if player.UUID == current_player_id:
-			_update_player_info(slots[0], player)
-			_update_player_items(slots[0], player)
-			break
+	if current_player_id == "":
+		return
 
-	# Preenche os outros slots
-	var slot_index: int = 1
+	var other_players: Array = []
+	print("------- ------ ------- ------ ------- ------ ------- ------ ------- ------")
+	print("INICIANDO ATUALIZAÇÃO UI JOGADORES")
+
 	for player: Player in players:
 		if player.UUID == current_player_id:
-			continue
+			_update_player_info(player_slot_1, player)
+		else:
+			other_players.append(player)
+
+	var slot_index := 1
+	for player: Player in other_players:
 		if slot_index >= slots.size():
 			break
 		_update_player_info(slots[slot_index], player)
-		_update_player_items(slots[slot_index], player)
 		slot_index += 1
-	print("finalizando de atualizar")
+	print("FINALIZANDO ATUALIZAÇÃO UI JOGADORES")
+	print("------- ------ ------- ------ ------- ------ ------- ------ ------- ------")
 
 # ==========================
 # FUNÇÕES AUXILIARES PARA UI
@@ -71,86 +76,110 @@ func _update_player_info(slot_panel: Panel, player: Player) -> void:
 	slot_panel.get_node("NameLabel").text = player.name
 	slot_panel.get_node("LevelLabel").text = str(player.level)
 
-func _update_player_items(slot_panel: Panel, player: Player) -> void:
-	var items_container := slot_panel.get_node("ItemsContainer") as VBoxContainer
-	for child in items_container.get_children():
-		child.queue_free()
-	for slot_data in player.equipment.values():
-		for card in slot_data["items"]:
-			var label := Label.new()
-			label.text = card.name
-			items_container.add_child(label)
-
 # ==========================
 # REAGE AO INÍCIO DE TURNO
 # ==========================
 func _on_play_turn_started(player_uuid: String):
-	print("vindo: ",player_uuid,"|  currente: ", current_player_id)
+	print("\n---->TURNO DO JOGADOR INICIOU\n")
 	var is_local = player_uuid == current_player_id
-	print("/n/n Locla: ",str(is_local))
+	print("\n-------------------> ",str(is_local))
+	if !is_local:
+		GameData.explorer.emit()
+		print("---->JOGADOR EQUIPOU ITENS E EXPLOROU ------------------> ", is_local)
+		print("------- ------ ------- ------ ------- ------ ------- ------ ------- ------\n\n")
+		return 
 	var turno_inicio = $Turno_Player.get_node("Inicio_turno")
 	turno_inicio.visible = is_local
-	if is_local:
-		print("É o turno do jogador local")
-	else:
-		print("Bot jogando")
-		await get_tree().create_timer(1.0).timeout  # espera 2 segundos
-		GameData.turn_ended.emit()
-# ==========================
-# ATUALIZA TIMER NA UI
-# ==========================
-func _on_turn_started(uuid):
-	_update_timer_label(GameData.turn_time)
-
-func _on_timer_updated(seconds_left):
-	_update_timer_label(seconds_left)
-
-func _update_timer_label(seconds_left: float):
-	if seconds_left <= 0:
-		#GameData.turn_ended.emit()
-		return
-	$timer_label.text = str(int(seconds_left))
+	
 	
 func _on_combat_turn(player_uuid: String, card: Card):
-	print("vindo: ",player_uuid," |  currente: ", current_player_id)
+	card_turn = card
 	var is_local = player_uuid == current_player_id
 	if is_local:
-		var turno= $Turno_Player.get_node("Turno")
-		turno.visible = is_local
-		turno.get_node("Combate").visible = is_local
-		turno.get_node("Combate").get_node("Data").text = card.name
+		if card.category == "monster":
+			var turno= $Turno_Player.get_node("Turno")
+			turno.visible = is_local
+			turno.get_node("Combate").visible = is_local
+			turno.get_node("Combate").get_node("Data").text = card.name
+			print("Deu de cara com: ", card.name)
+		else:
+			var turno= $Turno_Player.get_node("Turno")
+			turno.visible = is_local
+			turno.get_node("EndTurn").visible = is_local
+	else:
 		print("Deu de cara com: ", card.name)
-	print("Deu de cara com: ", card.name)
+		await bot.combat(player_uuid, card)
+		GameData.turn_ended.emit()
 		
+func _on_help_request(player_uuid):
+	$helper.visible = true
+	await get_tree().create_timer(10.0).timeout 
+	$helper.visible = false
 #==============================================================================
-#==========================BUTÕES==============================================
+#==========================BOTÕES==============================================
 #==============================================================================
 func _on_explorar_pressed() -> void:
 	print("Clicou em Explorar")
 	var turno_inicio = $Turno_Player.get_node("Inicio_turno")
 	turno_inicio.visible = false
-	explorer.emit()
-
-
+	GameData.explorer.emit()
+	print("---->JOGADOR EQUIPOU ITENS E EXPLOROU")
+	print("------- ------ ------- ------ ------- ------ ------- ------ ------- ------\n\n")
+	
 func _on_equipar_pressed() -> void:
 	pass # Replace with function body.
 
 
 func _on_lutar_pressed() -> void:
-	pass # Replace with function body.
-
+	var card = card_turn
+	var player: Player =  GameData.getPlayer(GameData.player_turn)
+	if player.get_power() >= card.monster_power:
+		print("Parabéns, você venceu o monstro ", card.name)
+		player.level_up(card.reward_levels)
+	else:
+		print("Morreu para monstro ", card.name)
+	var turno= $Turno_Player.get_node("Turno")
+	turno.visible = false
+	turno.get_node("Combate").visible = false
+	turno.get_node("Combate").get_node("Data").text = ""
+	GameData.turn_ended.emit()
 
 func _on_pedir_ajuda_pressed() -> void:
 	pass # Replace with function body.
 
 
 func _on_fugir_pressed() -> void:
-	pass # Replace with function body.
-
+	var rand = randi_range(1,6)
+	if(rand >= 5):
+		print("Fugiu com sucesso")
+	else: 
+		print("Você Morreu")
+	var turno= $Turno_Player.get_node("Turno")
+	turno.visible = false
+	turno.get_node("Combate").visible = false
+	turno.get_node("Combate").get_node("Data").text = ""
+	GameData.turn_ended.emit()
 
 func _on_invocar_pressed() -> void:
-	pass # Replace with function body.
-
+	var turno= $Turno_Player.get_node("Turno")
+	turno.visible = false
+	turno.get_node("Combate").visible = false
+	turno.get_node("Combate").get_node("Data").text = ""
+	GameData.turn_ended.emit()
 
 func _on_finalizar_pressed() -> void:
-	pass # Replace with function body.
+	var turno= $Turno_Player.get_node("Turno")
+	turno.visible = false
+	turno.get_node("EndTurn").visible = false
+	GameData.turn_ended.emit()
+
+
+func _on_yes_pressed() -> void:
+	if GameData.helper_locked:
+		return
+	GameData.helper_locked = true
+	GameData.helper_selected.emit(GameData.current_player.UUID)
+	$helper.visible = false
+
+func _on_no_pressed() -> void:
+	$helper.visible = false
