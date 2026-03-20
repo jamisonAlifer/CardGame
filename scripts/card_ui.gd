@@ -18,6 +18,7 @@ var drag_offset := Vector2.ZERO
 
 func _ready() -> void:
 	_set_children_mouse_filter(self)
+	player = GameData.current_player
 	original_position.y = global_position.y
 	original_z = z_index
 
@@ -72,25 +73,25 @@ func _on_mouse_exited() -> void:
 
 func _get_drag_data(at_position: Vector2) -> Variant:
 	dragging = true
-	
-	# cria um container vazio como wrapper
+
 	var wrapper = Control.new()
 	wrapper.custom_minimum_size = size
-	
+
 	var preview = duplicate()
 	preview.set_script(null)
-	# offset negativo para centralizar
-	preview.position = Vector2(-50, -100)  # testa com valores fixos
-	
+	preview.position = Vector2(-50, -100)
 	wrapper.add_child(preview)
 	set_drag_preview(wrapper)
+
+	# ← esconde só o visual, não o nó inteiro
+	modulate.a = 0.0
 	return self
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_DRAG_END:
 		dragging = false
-		# volta pra posição original se não houve drop
 		if not get_viewport().gui_is_drag_successful():
+			modulate.a = 1.0  # ← restaura o visual
 			z_index = original_z
 			scale = original_scale
 			_animate_card(original_position.y, original_scale, original_rotate)

@@ -39,6 +39,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_10nbh")
 
+[node name="is_turn" type="ColorRect" parent="." unique_id=1330389609]
+visible = false
+layout_mode = 0
+offset_left = 117.0
+offset_top = 12.0
+offset_right = 129.0
+offset_bottom = 23.0
+mouse_filter = 2
+color = Color(0.14901961, 1, 1, 1)
+
 [node name="Container" type="ColorRect" parent="." unique_id=1911847936]
 layout_mode = 1
 anchors_preset = -1

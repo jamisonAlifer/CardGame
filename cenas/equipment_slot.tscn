@@ -1,145 +1,191 @@
 [gd_scene format=3 uid="uid://ds3mpnowdbbi4"]
 
+[ext_resource type="Script" uid="uid://uy3cunmuu1wk" path="res://scripts/equipment_slot.gd" id="1_6qkli"]
 [ext_resource type="Script" uid="uid://d0dsyffwc266y" path="res://scripts/drag_itens.gd" id="2_6qkli"]
 
 [node name="EquipmentSlot" type="Control" unique_id=493944392]
+modulate = Color(1, 1, 1, 0.61960787)
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 167.0
+offset_bottom = 308.0
+script = ExtResource("1_6qkli")
 
-[node name="HandSlot" type="Panel" parent="." unique_id=1162720636]
-layout_mode = 0
-offset_left = 980.0
-offset_top = 529.0
-offset_right = 1152.0
-offset_bottom = 644.0
-script = ExtResource("2_6qkli")
-
-[node name="Title" type="Label" parent="HandSlot" unique_id=26957975]
-layout_mode = 0
-offset_left = 57.0
-offset_top = 1.0
-offset_right = 104.0
-offset_bottom = 24.0
-text = "HAND"
-
-[node name="Item" type="Label" parent="HandSlot" unique_id=80525669]
+[node name="Container" type="VBoxContainer" parent="." unique_id=1606826427]
 layout_mode = 0
 offset_left = 1.0
-offset_top = 39.0
-offset_right = 171.0
-offset_bottom = 62.0
-text = "Calça Calçada"
-horizontal_alignment = 1
+offset_right = 166.0
+offset_bottom = 308.0
 
-[node name="Item2" type="Label" parent="HandSlot" unique_id=2013006344]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 87.0
-offset_right = 170.0
-offset_bottom = 110.0
-text = "Calça Calçada"
-horizontal_alignment = 1
+[node name="Slot01" type="Control" parent="Container" unique_id=173787324]
+layout_mode = 2
+size_flags_vertical = 3
 
-[node name="FeetSlot" type="Panel" parent="." unique_id=386855309]
+[node name="Slot_data" type="Panel" parent="Container/Slot01" unique_id=720193819]
 layout_mode = 0
-offset_left = 978.0
-offset_top = 444.0
-offset_right = 1151.0
-offset_bottom = 509.0
+offset_left = 107.0
+offset_right = 163.0
+offset_bottom = 57.0
 script = ExtResource("2_6qkli")
 
-[node name="Title" type="Label" parent="FeetSlot" unique_id=316120591]
+[node name="Label" type="Label" parent="Container/Slot01/Slot_data" unique_id=1860660072]
 layout_mode = 0
-offset_left = 68.0
-offset_top = -3.0
-offset_right = 108.0
-offset_bottom = 20.0
-text = "FEET"
-
-[node name="Item" type="Label" parent="FeetSlot" unique_id=1023546664]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 41.0
-offset_right = 184.0
-offset_bottom = 64.0
-text = "Calça Calçada"
-horizontal_alignment = 1
-
-[node name="BodySlot" type="Panel" parent="." unique_id=1059566361]
-layout_mode = 0
-offset_left = 976.0
-offset_top = 272.0
-offset_right = 1152.0
-offset_bottom = 336.0
-script = ExtResource("2_6qkli")
-
-[node name="Title" type="Label" parent="BodySlot" unique_id=1496245703]
-layout_mode = 0
-offset_left = 67.0
-offset_top = -1.0
-offset_right = 112.0
-offset_bottom = 22.0
-text = "BODY"
-
-[node name="Item" type="Label" parent="BodySlot" unique_id=267717873]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 39.0
-offset_right = 176.0
-offset_bottom = 62.0
-text = "Calça Calçada"
-horizontal_alignment = 1
-
-[node name="HeadSlot" type="Panel" parent="." unique_id=1886296767]
-layout_mode = 0
-offset_left = 974.0
-offset_top = 194.0
-offset_right = 1152.0
-offset_bottom = 257.0
-script = ExtResource("2_6qkli")
-
-[node name="Title" type="Label" parent="HeadSlot" unique_id=1722565111]
-layout_mode = 0
-offset_left = 66.0
-offset_top = 2.0
-offset_right = 110.0
-offset_bottom = 25.0
+offset_right = 58.0
+offset_bottom = 55.0
 text = "HEAD"
-
-[node name="Item" type="Label" parent="HeadSlot" unique_id=1113027994]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 38.0
-offset_right = 178.0
-offset_bottom = 61.0
-text = "Calça Calçada"
 horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="LegsSlot" type="Panel" parent="." unique_id=145828037]
+[node name="Slot" type="Panel" parent="Container/Slot01" unique_id=1162720636]
 layout_mode = 0
-offset_left = 975.0
-offset_top = 357.0
-offset_right = 1152.0
-offset_bottom = 419.0
+offset_right = 100.0
+offset_bottom = 57.0
 script = ExtResource("2_6qkli")
 
-[node name="Title" type="Label" parent="LegsSlot" unique_id=637507442]
+[node name="Label" type="Label" parent="Container/Slot01/Slot" unique_id=1967105635]
 layout_mode = 0
-offset_left = 71.0
-offset_top = -1.0
-offset_right = 111.0
-offset_bottom = 22.0
-text = "LEG"
-
-[node name="Item" type="Label" parent="LegsSlot" unique_id=925998755]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 36.0
-offset_right = 175.0
-offset_bottom = 59.0
-text = "Calça Calçada"
+offset_right = 98.0
+offset_bottom = 55.0
+text = "HEAD"
 horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot02" type="Control" parent="Container" unique_id=1041721726]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Slot_data" type="Panel" parent="Container/Slot02" unique_id=1454465687]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 31.0
+offset_right = 162.0
+offset_bottom = 57.0
+
+[node name="Label" type="Label" parent="Container/Slot02/Slot_data" unique_id=1664766112]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 56.0
+offset_bottom = 26.0
+text = "HANDS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot_data2" type="Panel" parent="Container/Slot02" unique_id=1282192604]
+layout_mode = 0
+offset_left = 107.0
+offset_right = 163.0
+offset_bottom = 27.0
+
+[node name="Label" type="Label" parent="Container/Slot02/Slot_data2" unique_id=429378803]
+layout_mode = 0
+offset_right = 56.0
+offset_bottom = 26.0
+text = "HANDS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot" type="Panel" parent="Container/Slot02" unique_id=1185933570]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 57.0
+
+[node name="Label" type="Label" parent="Container/Slot02/Slot" unique_id=757792248]
+layout_mode = 0
+offset_right = 98.0
+offset_bottom = 55.0
+text = "HANDS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot03" type="Control" parent="Container" unique_id=2060290112]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Slot_data" type="Panel" parent="Container/Slot03" unique_id=229180728]
+layout_mode = 0
+offset_left = 107.0
+offset_right = 162.0
+offset_bottom = 57.0
+
+[node name="Label" type="Label" parent="Container/Slot03/Slot_data" unique_id=593035054]
+layout_mode = 0
+offset_right = 54.0
+offset_bottom = 55.0
+text = "HEAD"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot" type="Panel" parent="Container/Slot03" unique_id=684453887]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 57.0
+
+[node name="Label" type="Label" parent="Container/Slot03/Slot" unique_id=1374752126]
+layout_mode = 0
+offset_right = 98.0
+offset_bottom = 55.0
+text = "CHEST"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot04" type="Control" parent="Container" unique_id=1959652485]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Slot_data" type="Panel" parent="Container/Slot04" unique_id=285334434]
+layout_mode = 0
+offset_left = 107.0
+offset_right = 162.0
+offset_bottom = 57.0
+
+[node name="Label" type="Label" parent="Container/Slot04/Slot_data" unique_id=392974035]
+layout_mode = 0
+offset_right = 54.0
+offset_bottom = 55.0
+text = "HEAD"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot" type="Panel" parent="Container/Slot04" unique_id=182066656]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 57.0
+
+[node name="Label" type="Label" parent="Container/Slot04/Slot" unique_id=81216994]
+layout_mode = 0
+offset_right = 98.0
+offset_bottom = 55.0
+text = "LEGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot05" type="Control" parent="Container" unique_id=1320733814]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Slot_data" type="Panel" parent="Container/Slot05" unique_id=795875351]
+layout_mode = 0
+offset_left = 107.0
+offset_right = 162.0
+offset_bottom = 57.0
+
+[node name="Label" type="Label" parent="Container/Slot05/Slot_data" unique_id=963902548]
+layout_mode = 0
+offset_right = 54.0
+offset_bottom = 55.0
+text = "HEAD"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slot" type="Panel" parent="Container/Slot05" unique_id=619822895]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 57.0
+
+[node name="Label" type="Label" parent="Container/Slot05/Slot" unique_id=2047382362]
+layout_mode = 0
+offset_right = 98.0
+offset_bottom = 55.0
+text = "FEET"
+horizontal_alignment = 1
+vertical_alignment = 1

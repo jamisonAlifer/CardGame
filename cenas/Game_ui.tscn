@@ -13,287 +13,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_em4tf")
 
-[node name="PlayerSlot1" type="Panel" parent="." unique_id=1619602292]
-visible = false
-layout_mode = 0
-offset_left = 43.0
-offset_top = 35.0
-offset_right = 193.0
-offset_bottom = 185.0
-
-[node name="NameLabel" type="Label" parent="PlayerSlot1" unique_id=1975669731]
-layout_mode = 0
-offset_left = 48.0
-offset_top = 10.0
-offset_right = 106.0
-offset_bottom = 33.0
-text = "p1"
-
-[node name="LevelLabel" type="Label" parent="PlayerSlot1" unique_id=2002081282]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 10.0
-offset_right = 41.0
-offset_bottom = 33.0
-text = "00"
-
-[node name="ItemsContainer" type="VBoxContainer" parent="PlayerSlot1" unique_id=1033402900]
-layout_mode = 0
-offset_left = 14.0
-offset_top = 40.0
-offset_right = 127.0
-offset_bottom = 139.0
-
-[node name="PlayerSlot2" type="Panel" parent="." unique_id=1223001411]
-visible = false
-layout_mode = 0
-offset_left = 429.0
-offset_top = 35.0
-offset_right = 579.0
-offset_bottom = 185.0
-
-[node name="NameLabel" type="Label" parent="PlayerSlot2" unique_id=848244229]
-layout_mode = 0
-offset_left = 48.0
-offset_top = 10.0
-offset_right = 106.0
-offset_bottom = 33.0
-text = "P2"
-
-[node name="LevelLabel" type="Label" parent="PlayerSlot2" unique_id=1494692690]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 10.0
-offset_right = 41.0
-offset_bottom = 33.0
-text = "00"
-
-[node name="ItemsContainer" type="VBoxContainer" parent="PlayerSlot2" unique_id=1262917103]
-layout_mode = 0
-offset_left = 14.0
-offset_top = 40.0
-offset_right = 127.0
-offset_bottom = 139.0
-
-[node name="PlayerSlot3" type="Panel" parent="." unique_id=204108887]
-visible = false
-layout_mode = 0
-offset_left = 615.0
-offset_top = 35.0
-offset_right = 765.0
-offset_bottom = 185.0
-
-[node name="NameLabel" type="Label" parent="PlayerSlot3" unique_id=1078380345]
-layout_mode = 0
-offset_left = 48.0
-offset_top = 10.0
-offset_right = 106.0
-offset_bottom = 33.0
-text = "Player1"
-
-[node name="LevelLabel" type="Label" parent="PlayerSlot3" unique_id=728975765]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 10.0
-offset_right = 41.0
-offset_bottom = 33.0
-text = "09"
-
-[node name="ItemsContainer" type="VBoxContainer" parent="PlayerSlot3" unique_id=711693737]
-layout_mode = 0
-offset_left = 14.0
-offset_top = 40.0
-offset_right = 127.0
-offset_bottom = 139.0
-
-[node name="PlayerSlot4" type="Panel" parent="." unique_id=847925356]
-visible = false
-layout_mode = 0
-offset_left = 799.0
-offset_top = 35.0
-offset_right = 949.0
-offset_bottom = 185.0
-
-[node name="Label" type="Label" parent="PlayerSlot4" unique_id=1334219245]
-layout_mode = 0
-offset_left = 36.0
-offset_top = 11.0
-offset_right = 94.0
-offset_bottom = 34.0
-text = "Player1"
-
-[node name="PlayerSlot5" type="Panel" parent="." unique_id=1162239613]
-visible = false
-layout_mode = 0
-offset_left = 979.0
-offset_top = 35.0
-offset_right = 1129.0
-offset_bottom = 185.0
-
-[node name="Label" type="Label" parent="PlayerSlot5" unique_id=1687834684]
-layout_mode = 0
-offset_left = 36.0
-offset_top = 11.0
-offset_right = 94.0
-offset_bottom = 34.0
-text = "Player1"
-
-[node name="Label" type="Label" parent="." unique_id=76522550]
-layout_mode = 0
-offset_left = 13.0
-offset_top = 6.0
-offset_right = 204.0
-offset_bottom = 29.0
-text = "Player ID"
-
-[node name="Turno_Player" type="Control" parent="." unique_id=34471397]
-anchors_preset = 0
-offset_left = 431.0
-offset_top = 247.0
-offset_right = 471.0
-offset_bottom = 287.0
-
-[node name="Inicio_turno" type="Panel" parent="Turno_Player" unique_id=1380970018]
-visible = false
-layout_mode = 0
-offset_left = -1.0
-offset_top = 2.0
-offset_right = 294.0
-offset_bottom = 276.0
-
-[node name="Explorar" type="Button" parent="Turno_Player/Inicio_turno" unique_id=226441180]
-layout_mode = 0
-offset_left = 62.0
-offset_top = 66.0
-offset_right = 232.0
-offset_bottom = 117.0
-text = "Explorar"
-
-[node name="Equipar" type="Button" parent="Turno_Player/Inicio_turno" unique_id=1900726419]
-layout_mode = 0
-offset_left = 67.0
-offset_top = 162.0
-offset_right = 237.0
-offset_bottom = 213.0
-text = "Equipar itens"
-
-[node name="Turno" type="Panel" parent="Turno_Player" unique_id=1507014282]
-visible = false
-layout_mode = 0
-offset_right = 295.0
-offset_bottom = 274.0
-
-[node name="Combate" type="Control" parent="Turno_Player/Turno" unique_id=427861435]
-visible = false
-anchors_preset = 0
-offset_left = -431.0
-offset_top = -247.0
-offset_right = -391.0
-offset_bottom = -207.0
-
-[node name="Data" type="Label" parent="Turno_Player/Turno/Combate" unique_id=102493061]
-layout_mode = 0
-offset_left = 518.0
-offset_top = 286.0
-offset_right = 615.0
-offset_bottom = 309.0
-text = "Monstro tal"
-
-[node name="Lutar" type="Button" parent="Turno_Player/Turno/Combate" unique_id=462343294]
-layout_mode = 0
-offset_left = 526.0
-offset_top = 380.0
-offset_right = 627.0
-offset_bottom = 411.0
-text = "Lutar"
-
-[node name="PedirAjuda" type="Button" parent="Turno_Player/Turno/Combate" unique_id=1942177381]
-layout_mode = 0
-offset_left = 523.0
-offset_top = 425.0
-offset_right = 634.0
-offset_bottom = 456.0
-text = "Pedir  auJuda"
-
-[node name="Fugir" type="Button" parent="Turno_Player/Turno/Combate" unique_id=1943530998]
-layout_mode = 0
-offset_left = 524.0
-offset_top = 468.0
-offset_right = 635.0
-offset_bottom = 499.0
-text = "Fugir"
-
-[node name="EndTurn" type="Control" parent="Turno_Player/Turno" unique_id=949442610]
-visible = false
-anchors_preset = 0
-offset_left = -431.0
-offset_top = -247.0
-offset_right = -391.0
-offset_bottom = -207.0
-
-[node name="Invocar" type="Button" parent="Turno_Player/Turno/EndTurn" unique_id=733640712]
-layout_mode = 0
-offset_left = 523.0
-offset_top = 402.0
-offset_right = 624.0
-offset_bottom = 433.0
-text = "Invocar"
-
-[node name="Finalizar" type="Button" parent="Turno_Player/Turno/EndTurn" unique_id=1442859210]
-layout_mode = 0
-offset_left = 519.0
-offset_top = 450.0
-offset_right = 630.0
-offset_bottom = 481.0
-text = "Finalizar turno"
-
-[node name="EquipmentSlot" parent="." unique_id=493944392 instance=ExtResource("3_nipa6")]
-layout_mode = 1
-anchors_preset = -1
-
-[node name="helper" type="Panel" parent="." unique_id=1666684203]
-visible = false
-layout_mode = 0
-offset_left = 12.0
-offset_top = 549.0
-offset_right = 281.0
-offset_bottom = 636.0
-
-[node name="Label" type="Label" parent="helper" unique_id=189431907]
-layout_mode = 0
-offset_left = 21.0
-offset_top = 4.0
-offset_right = 228.0
-offset_bottom = 27.0
-text = "Player X solictou sua ajuda"
-
-[node name="yes" type="Button" parent="helper" unique_id=1805482686]
-layout_mode = 0
-offset_left = 17.0
-offset_top = 51.0
-offset_right = 106.0
-offset_bottom = 82.0
-text = "Sim"
-
-[node name="no" type="Button" parent="helper" unique_id=1006669318]
-layout_mode = 0
-offset_left = 155.0
-offset_top = 51.0
-offset_right = 244.0
-offset_bottom = 82.0
-text = "Não"
-
-[node name="Hand" parent="." unique_id=1015080693 instance=ExtResource("3_nf12e")]
-layout_mode = 0
-offset_left = 0.0
-offset_top = 481.0
-offset_right = 1280.0
-offset_bottom = 719.0
-
 [node name="Control" type="Control" parent="." unique_id=688959000]
 anchors_preset = 0
-offset_left = 331.0
-offset_right = 1289.0
+offset_left = 322.0
+offset_right = 1278.0
 offset_bottom = 153.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1548306217]
@@ -304,12 +27,202 @@ offset_right = 953.0
 offset_bottom = 165.0
 theme_override_constants/separation = 210
 
-[connection signal="pressed" from="Turno_Player/Inicio_turno/Explorar" to="." method="_on_explorar_pressed"]
-[connection signal="pressed" from="Turno_Player/Inicio_turno/Equipar" to="." method="_on_equipar_pressed"]
-[connection signal="pressed" from="Turno_Player/Turno/Combate/Lutar" to="." method="_on_lutar_pressed"]
-[connection signal="pressed" from="Turno_Player/Turno/Combate/PedirAjuda" to="." method="_on_pedir_ajuda_pressed"]
-[connection signal="pressed" from="Turno_Player/Turno/Combate/Fugir" to="." method="_on_fugir_pressed"]
-[connection signal="pressed" from="Turno_Player/Turno/EndTurn/Invocar" to="." method="_on_invocar_pressed"]
-[connection signal="pressed" from="Turno_Player/Turno/EndTurn/Finalizar" to="." method="_on_finalizar_pressed"]
-[connection signal="pressed" from="helper/yes" to="." method="_on_yes_pressed"]
-[connection signal="pressed" from="helper/no" to="." method="_on_no_pressed"]
+[node name="Player_ui_stats" type="Control" parent="." unique_id=910471314]
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 154.0
+
+[node name="Hand" parent="." unique_id=1015080693 instance=ExtResource("3_nf12e")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 481.0
+offset_right = 1280.0
+offset_bottom = 719.0
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=520326018]
+
+[node name="Panel" type="Panel" parent="CanvasLayer2" unique_id=2040387148]
+offset_left = 432.0
+offset_top = 171.0
+offset_right = 762.0
+offset_bottom = 525.0
+
+[node name="Panel2" type="Panel" parent="CanvasLayer2" unique_id=1421064292]
+offset_left = 949.0
+offset_top = 178.0
+offset_right = 1195.0
+offset_bottom = 513.0
+
+[node name="Label" type="Label" parent="CanvasLayer2/Panel2" unique_id=893843243]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 8.0
+offset_right = 241.0
+offset_bottom = 333.0
+text = "Explorar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=356759815]
+
+[node name="logs" type="Panel" parent="CanvasLayer" unique_id=955808655]
+offset_left = 8.0
+offset_top = 516.0
+offset_right = 281.0
+offset_bottom = 686.0
+
+[node name="EquipmentSlot" parent="CanvasLayer" unique_id=493944392 instance=ExtResource("3_nipa6")]
+offset_top = 168.0
+offset_bottom = 476.0
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=76522550]
+offset_left = 4.0
+offset_top = 705.0
+offset_right = 195.0
+offset_bottom = 718.0
+theme_override_font_sizes/font_size = 9
+text = "Player ID"
+
+[node name="helper" type="Panel" parent="CanvasLayer" unique_id=1666684203]
+visible = false
+offset_left = 12.0
+offset_top = 361.0
+offset_right = 281.0
+offset_bottom = 448.0
+
+[node name="Label" type="Label" parent="CanvasLayer/helper" unique_id=189431907]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 4.0
+offset_right = 228.0
+offset_bottom = 27.0
+text = "Player X solictou sua ajuda"
+
+[node name="yes" type="Button" parent="CanvasLayer/helper" unique_id=1805482686]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 51.0
+offset_right = 106.0
+offset_bottom = 82.0
+text = "Sim"
+
+[node name="no" type="Button" parent="CanvasLayer/helper" unique_id=1006669318]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 51.0
+offset_right = 244.0
+offset_bottom = 82.0
+text = "Não"
+
+[node name="Turno_Player" type="Control" parent="CanvasLayer" unique_id=34471397]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 431.0
+offset_top = 247.0
+offset_right = 471.0
+offset_bottom = 287.0
+
+[node name="Inicio_turno" type="Panel" parent="CanvasLayer/Turno_Player" unique_id=1380970018]
+visible = false
+layout_mode = 0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 294.0
+offset_bottom = 276.0
+
+[node name="Explorar" type="Button" parent="CanvasLayer/Turno_Player/Inicio_turno" unique_id=226441180]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 66.0
+offset_right = 232.0
+offset_bottom = 117.0
+text = "Explorar"
+
+[node name="Equipar" type="Button" parent="CanvasLayer/Turno_Player/Inicio_turno" unique_id=1900726419]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 162.0
+offset_right = 237.0
+offset_bottom = 213.0
+text = "Equipar itens"
+
+[node name="Turno" type="Panel" parent="CanvasLayer/Turno_Player" unique_id=1507014282]
+visible = false
+layout_mode = 0
+offset_right = 295.0
+offset_bottom = 274.0
+
+[node name="Combate" type="Control" parent="CanvasLayer/Turno_Player/Turno" unique_id=427861435]
+visible = false
+anchors_preset = 0
+offset_left = -431.0
+offset_top = -247.0
+offset_right = -391.0
+offset_bottom = -207.0
+
+[node name="Data" type="Label" parent="CanvasLayer/Turno_Player/Turno/Combate" unique_id=102493061]
+layout_mode = 0
+offset_left = 518.0
+offset_top = 286.0
+offset_right = 615.0
+offset_bottom = 309.0
+text = "Monstro tal"
+
+[node name="Lutar" type="Button" parent="CanvasLayer/Turno_Player/Turno/Combate" unique_id=462343294]
+layout_mode = 0
+offset_left = 526.0
+offset_top = 380.0
+offset_right = 627.0
+offset_bottom = 411.0
+text = "Lutar"
+
+[node name="PedirAjuda" type="Button" parent="CanvasLayer/Turno_Player/Turno/Combate" unique_id=1942177381]
+layout_mode = 0
+offset_left = 523.0
+offset_top = 425.0
+offset_right = 634.0
+offset_bottom = 456.0
+text = "Pedir  auJuda"
+
+[node name="Fugir" type="Button" parent="CanvasLayer/Turno_Player/Turno/Combate" unique_id=1943530998]
+layout_mode = 0
+offset_left = 524.0
+offset_top = 468.0
+offset_right = 635.0
+offset_bottom = 499.0
+text = "Fugir"
+
+[node name="EndTurn" type="Control" parent="CanvasLayer/Turno_Player/Turno" unique_id=949442610]
+visible = false
+anchors_preset = 0
+offset_left = -431.0
+offset_top = -247.0
+offset_right = -391.0
+offset_bottom = -207.0
+
+[node name="Invocar" type="Button" parent="CanvasLayer/Turno_Player/Turno/EndTurn" unique_id=733640712]
+layout_mode = 0
+offset_left = 523.0
+offset_top = 402.0
+offset_right = 624.0
+offset_bottom = 433.0
+text = "Invocar"
+
+[node name="Finalizar" type="Button" parent="CanvasLayer/Turno_Player/Turno/EndTurn" unique_id=1442859210]
+layout_mode = 0
+offset_left = 519.0
+offset_top = 450.0
+offset_right = 630.0
+offset_bottom = 481.0
+text = "Finalizar turno"
+
+[connection signal="pressed" from="CanvasLayer/helper/yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="CanvasLayer/helper/no" to="." method="_on_no_pressed"]
+[connection signal="pressed" from="CanvasLayer/Turno_Player/Inicio_turno/Explorar" to="." method="_on_explorar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Turno_Player/Inicio_turno/Equipar" to="." method="_on_equipar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Turno_Player/Turno/Combate/Lutar" to="." method="_on_lutar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Turno_Player/Turno/Combate/PedirAjuda" to="." method="_on_pedir_ajuda_pressed"]
+[connection signal="pressed" from="CanvasLayer/Turno_Player/Turno/Combate/Fugir" to="." method="_on_fugir_pressed"]
+[connection signal="pressed" from="CanvasLayer/Turno_Player/Turno/EndTurn/Invocar" to="." method="_on_invocar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Turno_Player/Turno/EndTurn/Finalizar" to="." method="_on_finalizar_pressed"]

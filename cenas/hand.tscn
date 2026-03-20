@@ -25,6 +25,7 @@ offset_bottom = 700.72
 mouse_filter = 1
 
 [node name="Button" type="Button" parent="." unique_id=1848384302]
+visible = false
 layout_mode = 0
 offset_left = 584.0
 offset_top = -135.0
